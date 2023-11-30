@@ -73,20 +73,15 @@ public class EnUygunStepdefinition {
     }
 
 
-
-
     @When("User enters departure location {string}")
     public void userEntersDepartureLocation(String departure_location) {
-        fillFormField(homePage.nereden,departure_location);
-
+        fillFormField(homePage.nereden, departure_location);
 
     }
 
     @When("User enters arrival location {string}")
     public void userEntersArrivalLocation(String arrivallocation) {
-        fillFormField(homePage.nereye,arrivallocation);
-
-
+        fillFormField(homePage.nereye, arrivallocation);
 
     }
 
@@ -137,7 +132,7 @@ public class EnUygunStepdefinition {
             date.clear();
             homePage.calendarRightArrowReturnDate.click();
         } while (true);
-
+        waitFor(5);
     }
 
 
@@ -182,26 +177,20 @@ public class EnUygunStepdefinition {
                 homePage.firstClass.click();
                 break;
         }
-        waitFor(3);
 
         homePage.tamam.click();
-        waitFor(3);
 
     }
 
     @When("User clicks Ucuz bilet bul button")
     public void userClicksUcuzBiletBulButton() {
         homePage.ucuzBiletBulButton.click();
-        waitFor(3);
-
 
     }
 
     @Then("User verifies that flight list page is visible")
     public void userVerifiesThatFlightListPageIsVisible() {
-        System.out.println("flightListPage.gidis.getText() = " + flightListPage.addFavorite.getText());
         assertTrue(flightListPage.addFavorite.isDisplayed());
-
 
     }
 
