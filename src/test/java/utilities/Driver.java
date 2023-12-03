@@ -24,7 +24,6 @@ public class Driver {
                     driver = new FirefoxDriver();
                     break;
                 case "edge":
-
                     driver = new EdgeDriver();
                     break;
             }
